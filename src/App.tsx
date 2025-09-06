@@ -7,8 +7,15 @@ import LogoLoop from "./components/LogoLoop";
 import Aurora from "./components/Aurora";
 import Nav from "./components/Nav";
 import myImage from "./assets/myImage.jpg";
+import bloggSite from "./assets/projects/bloggSite.png";
+import ContentGenerator from "./assets/projects/ContentGenerator.png";
+import payTm from "./assets/projects/payTm.jpeg";
+import dig_dicegame from "./assets/projects/dig_dicegame.png";
+import {GoArrowUpRight} from "react-icons/go";
 import {FaNodeJs} from "react-icons/fa";
 import {
+  SiHtml5,
+  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -23,10 +30,13 @@ import {
   SiDocker,
   SiGithub,
   SiCloudflare,
+  SiVercel,
 } from "react-icons/si";
 import ShinyText from "./components/ShinyText";
 
 const techLogos = [
+  {node: <SiHtml5 />, title: "React", href: "https://www.javascript.com/"},
+  {node: <SiCss3 />, title: "React", href: "https://www.javascript.com/"},
   {node: <SiJavascript />, title: "React", href: "https://www.javascript.com/"},
   {node: <SiReact />, title: "React", href: "https://react.dev"},
   {node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com"},
@@ -50,6 +60,7 @@ const techLogos = [
     href: "https://www.cloudflare.com/lp/pg-one-platform-ppc/?&utm_campaign=&utm_term=&gad_campaignid=22527073640",
   },
   {node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org"},
+  {node: <SiVercel />, title: "React", href: "https://www.javascript.com/"},
 ];
 function App() {
   return (
@@ -204,8 +215,348 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Projects section */}
+      <section id="projects" className="py-16 scroll-mt-15">
+        <div className="max-w-6xl mx-auto px-4 space-y-8 bg-transparent">
+          {/* First Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
+              <div className="max-w-full mb-4 sm:mb-2">
+                <img
+                  src={bloggSite}
+                  alt="blogging site"
+                  className="border border-white rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] transition"
+                />
+              </div>
+              <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
+                AI - Powered Blogging Website
+              </h3>
+              <div className="mb-5">
+                <ShinyText
+                  texts={[
+                    "TypeScript",
+                    "Hono",
+                    "React",
+                    "Tailwindcss",
+                    "Postgresql",
+                    "Prisma",
+                    "Cloudflare",
+                  ]}
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <a
+                  href="https://github.com/Kingsuk-03/Medium-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group">
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                 bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+                 shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+                 text-shadow">
+                    <SiGithub />
+                    Github
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                   bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                   blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+                <a
+                  href="https://medium-project-lovat.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group" // <-- add this
+                >
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+               bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+               shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+               text-shadow">
+                    <GoArrowUpRight /> Live Demo
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                 bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                 blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
+              <div className="max-w-full mb-4 sm:mb-2">
+                <img
+                  src={ContentGenerator}
+                  alt="blogging site"
+                  className="border border-white rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] transition"
+                />
+              </div>
+              <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
+                AI - Content Generator
+              </h3>
+              <div className="mb-5">
+                <ShinyText
+                  texts={[
+                    "TypeScript",
+                    "Hono",
+                    "React",
+                    "Tailwindcss",
+                    "Postgresql",
+                    "Prisma",
+                    "Cloudflare",
+                  ]}
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <a
+                  href="https://github.com/Kingsuk-03/Medium-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group">
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                 bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+                 shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+                 text-shadow">
+                    <SiGithub />
+                    Github
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                   bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                   blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+                <a
+                  href="https://medium-project-lovat.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group" // <-- add this
+                >
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+               bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+               shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+               text-shadow">
+                    <GoArrowUpRight /> Live Demo
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                 bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                 blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
+              <div className="max-w-full mb-4 sm:mb-2">
+                <img
+                  src={bloggSite}
+                  alt="blogging site"
+                  className="border border-white rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] transition"
+                />
+              </div>
+              <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
+                AI - Powered Blogging Website
+              </h3>
+              <div className="mb-5">
+                <ShinyText
+                  texts={[
+                    "TypeScript",
+                    "Hono",
+                    "React",
+                    "Tailwindcss",
+                    "Postgresql",
+                    "Prisma",
+                    "Cloudflare",
+                  ]}
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <a
+                  href="https://github.com/Kingsuk-03/Medium-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group">
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                 bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+                 shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+                 text-shadow">
+                    <SiGithub />
+                    Github
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                   bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                   blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+                <a
+                  href="https://medium-project-lovat.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group" // <-- add this
+                >
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+               bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+               shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+               text-shadow">
+                    <GoArrowUpRight /> Live Demo
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                 bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                 blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
+              <div className="max-w-full mb-4 sm:mb-2">
+                <img
+                  src={dig_dicegame}
+                  alt="Dice Game Preview"
+                  className="rounded-xl shadow-[0_0_15px_rgba(216,52,95,0.6)] hover:shadow-[0_0_25px_rgba(216,52,95,0.8)] transition"
+                />
+              </div>
+              <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
+                DIG - Dice Game
+              </h3>
+              <div className="mb-18">
+                <ShinyText
+                  texts={["JavaScript", "HTML", "CSS", "Vercel"]}
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <a
+                  href="https://github.com/Kingsuk-03/Dice_Game-PIG-"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group">
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                 bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+                 shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+                 text-shadow">
+                    <SiGithub />
+                    Github
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                   bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                   blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+                <a
+                  href="https://dice-game-pig.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group" // <-- add this
+                >
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+               bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+               shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+               text-shadow">
+                    <GoArrowUpRight /> Live Demo
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                 bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                 blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Separate Div */}
+          <div className="sm:max-w-full flex items-center justify-center">
+            <div className="sm:max-w-1/2 p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
+              <div className="max-w-full mb-4 sm:mb-2">
+                <img
+                  src={payTm}
+                  alt="blogging site"
+                  className="border border-white rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] transition"
+                />
+              </div>
+              <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
+                PayTM - Clone
+              </h3>
+              <div className="mb-5">
+                <ShinyText
+                  texts={[
+                    "TypeScript",
+                    "Hono",
+                    "React",
+                    "Tailwindcss",
+                    "Postgresql",
+                    "Prisma",
+                    "Cloudflare",
+                  ]}
+                  disabled={false}
+                  speed={3}
+                  className="custom-class"
+                />
+              </div>
+              <div className="flex flex-row gap-4">
+                <a
+                  href="https://github.com/Kingsuk-03/Medium-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group">
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                 bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+                 shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+                 text-shadow">
+                    <SiGithub />
+                    Github
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                   bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                   blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+                <a
+                  href="https://medium-project-lovat.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group" // <-- add this
+                >
+                  <div
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+               bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
+               shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
+               text-shadow">
+                    <GoArrowUpRight /> Live Demo
+                    <span
+                      className="absolute inset-0 rounded-xl transition-all duration-300
+                 bg-[conic-gradient(#0000_80deg,#40baf7,#f34ad7,#5bfcc4,#0000_280deg)]
+                 blur-0 -z-10 group-hover:blur-[15px] group-active:blur-[5px] group-active:translate-y-[1px]"></span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
-
 export default App;
