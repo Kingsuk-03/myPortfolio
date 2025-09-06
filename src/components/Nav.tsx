@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Menu, X} from "lucide-react";
 import logo from "../assets/kb_logo.png";
 
-const NAV_ITEMS = ["Home", "About", "Portfolio", "Services", "Contact"];
+const NAV_ITEMS = ["Home", "About", "Skills", "Projects", "Contact"];
 
 export default function Navbar(): React.JSX.Element {
   const [open, setOpen] = useState(false);
