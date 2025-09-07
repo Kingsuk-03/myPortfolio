@@ -4,15 +4,14 @@ import CircularText from "./components/CircularText";
 import TiltedCard from "./components/TiltedCard";
 import SplitText from "./components/SplitText";
 import LogoLoop from "./components/LogoLoop";
+import myImage from "./assets/myImage.jpg";
 import Aurora from "./components/Aurora";
 import Nav from "./components/Nav";
-import myImage from "./assets/myImage.jpg";
-import bloggSite from "./assets/projects/bloggSite.png";
 import ContentGenerator from "./assets/projects/ContentGenerator.png";
-import payTm from "./assets/projects/payTm.jpeg";
 import dig_dicegame from "./assets/projects/dig_dicegame.png";
+import bloggSite from "./assets/projects/bloggSite.png";
+import payTm from "./assets/projects/payTm.jpeg";
 import {GoArrowUpRight} from "react-icons/go";
-import {FaNodeJs} from "react-icons/fa";
 import {
   SiHtml5,
   SiCss3,
@@ -34,6 +33,7 @@ import {
 } from "react-icons/si";
 import ShinyText from "./components/ShinyText";
 import GradientText from "./components/GradientText";
+import {FaNodeJs} from "react-icons/fa";
 
 const techLogos = [
   {node: <SiHtml5 />, title: "React", href: "https://www.javascript.com/"},
@@ -569,6 +569,43 @@ function App() {
                   </div>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="footer">
+        <div className="text-white flex flex-row items-center justify-around mx-15 sm:mb-10">
+          <div>© Kingsuk Bose 2025</div>
+          <div className="flex flex-row gap-2">
+            <a
+              href="https://github.com/Kingsuk-03"
+              target="_blank"
+              className="hover:text-[#97ccf7] hover:drop-shadow-[0_0_8px_#97ccf7] transition-all duration-300">
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kingsuk-bose-995615245/"
+              target="_blank"
+              className="hover:text-[#97ccf7] hover:drop-shadow-[0_0_8px_#97ccf7] transition-all duration-300">
+              LinkedIn
+            </a>
+            <a
+              href="https://www.instagram.com/kingsuk.bose03/"
+              target="_blank"
+              className="hover:text-[#97ccf7] hover:drop-shadow-[0_0_8px_#97ccf7] transition-all duration-300">
+              Instagram
+            </a>
+          </div>
+        </div>
+        <div className="relative overflow-hidden whitespace-nowrap w-full text-white font-bold text-xl">
+          <div className="flex text-4xl px-8 mb-5 animate-[marquee_20s_linear_infinite]">
+            <div>
+              Thanks ✦ For ✦ Visiting ✦ My ✦ Portfolio ✦Thanks ✦ For ✦ Visiting ✦ My
+              ✦ Portfolio ✦
+            </div>
+            <div>
+              Thanks ✦ For ✦ Visiting ✦ My ✦ Portfolio ✦Thanks ✦ For ✦ Visiting ✦ My
+              ✦ Portfolio ✦
             </div>
           </div>
         </div>
