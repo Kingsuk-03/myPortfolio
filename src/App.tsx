@@ -33,6 +33,7 @@ import {
   SiVercel,
 } from "react-icons/si";
 import ShinyText from "./components/ShinyText";
+import GradientText from "./components/GradientText";
 
 const techLogos = [
   {node: <SiHtml5 />, title: "React", href: "https://www.javascript.com/"},
@@ -68,7 +69,7 @@ function App() {
       <div className="relative w-full h-[550px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden sm:mb-10 md:mb-20 lg:mb-50 ">
         <section id="home">
           {/* Aurora Background */}
-          <div className="h-[550px] sm:fixed sm:inset-0 sm:-z-10">
+          <div className="h-screen fixed inset-0 -z-10">
             <Aurora
               colorStops={["#7CFF67", "#B19EEF", "#5227FF"]}
               blend={0.5}
@@ -76,10 +77,11 @@ function App() {
               speed={0.5}
             />
           </div>
+
           {/* Navbar */}
           <Nav />
 
-          <div className="absolute inset-0 flex flex-col items-center justify-start px-4 text-center pt-30 sm:pt-35 md:pt-45 lg:pt-55">
+          <div className="absolute inset-0 flex flex-col items-center justify-start px-4 text-center pt-35 sm:pt-35 md:pt-45 lg:pt-55">
             <div className="flex items-center justify-center mb-2 sm:mb-4">
               <picture>
                 <source
@@ -163,7 +165,7 @@ function App() {
               <div className="text-center mb-5 lg:text-start font-semibold text-white text-[26px] sm:text-[50px] leading-8 sm:leading-15">
                 About Me
               </div>
-              <div className="text-center lg:text-start font-light text-slate-100 text-[18px] sm:text-2xl leading-5 sm:leading-7">
+              <div className="text-center lg:text-start font-light text-slate-100 text-[19px] sm:text-2xl leading-5 sm:leading-7">
                 I am — a Full-stack developer with a passion for crafting scalable,
                 AI-powered web applications. I specialize in building modern,
                 responsive interfaces and robust backend systems using technologies
@@ -175,7 +177,7 @@ function App() {
       </div>
       <section id="skills" className="scroll-mt-55">
         <div className="flex flex-col lg:flex-row mt-25 lg:mt-60 lg:items-center lg:justify-center lg:gap-10 mb-30">
-          <div className="mb-15 sm:m md:pl-20 lg:pl-35 lg:ml-30 lg:w-1/2 border-amber-50">
+          <div className="mb-15 md:pl-20 lg:pl-35 lg:ml-30 lg:w-1/2">
             <div className="text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[55px] leading-8 sm:leading-15">
               Skills
             </div>
@@ -217,7 +219,22 @@ function App() {
       </section>
 
       {/* Projects section */}
-      <section id="projects" className="py-16 scroll-mt-15">
+      <section id="projects" className="sm:py-16 scroll-mt-25 sm:scroll-mt-15">
+        <div className="mb-10 text-center lg:w-1/2">
+          <GradientText
+            colors={[
+              "rgba(255,255,255,0.0)", // fully transparent edge
+              "rgba(255,255,255,0.6)", // soft white
+              "rgba(255,255,255,1.0)", // pure bright white (shine core)
+              "rgba(255,255,255,0.6)", // soft white
+              "rgba(255,255,255,0.0)", // fully transparent edge
+            ]}
+            animationSpeed={10}
+            showBorder={false}
+            className="text-center mb-5 lg:text-start font-semibold text-[30px] sm:text-[55px] leading-8 sm:leading-15">
+            Projects
+          </GradientText>
+        </div>
         <div className="max-w-6xl mx-auto px-4 space-y-8 bg-transparent">
           {/* First Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

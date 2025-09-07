@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {Menu, X} from "lucide-react";
 import logo from "../assets/kb_logo.png";
+import {SiGithub, SiLinkedin} from "react-icons/si";
 
-const NAV_ITEMS = ["Home", "About", "Skills", "Projects", "Contact"];
+const NAV_ITEMS = ["Home", "About", "Skills", "Projects", "Education", "Contact"];
 
 export default function Navbar(): React.JSX.Element {
   const [open, setOpen] = useState(false);
@@ -43,6 +44,17 @@ export default function Navbar(): React.JSX.Element {
             ))}
           </nav>
 
+          <div className="text-white flex flex-row items-center justify-center gap-4.5 ml-10">
+            <a href="https://github.com/Kingsuk-03" target="_blank">
+              <SiGithub className="h-6.5 sm:h-4 lg:h-7 w-auto object-contain" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/kingsuk-bose-995615245/"
+              target="_blank">
+              <SiLinkedin className="h-6.5 sm:h-4 lg:h-7 w-auto object-contain" />
+            </a>
+          </div>
+
           {/* Right side: mobile menu button (hidden on md+) */}
           <div className="relative z-20 flex items-center pr-2">
             <button
@@ -63,7 +75,9 @@ export default function Navbar(): React.JSX.Element {
         <div
           id="mobile-menu"
           className={`md:hidden absolute left-0 right-0 top-full bg-white/6 backdrop-blur-md border-t border-white/10 overflow-hidden transition-[max-height,opacity] duration-300 ${
-            open ? "max-h-60 opacity-100 py-4 mx-4 rounded-xl" : "max-h-0 opacity-0"
+            open
+              ? "max-h-screen opacity-100 py-4 mx-4 rounded-xl"
+              : "max-h-0 opacity-0"
           }`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-4">
             {NAV_ITEMS.map((item) => (
