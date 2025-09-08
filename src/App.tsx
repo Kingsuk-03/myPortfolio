@@ -1,6 +1,5 @@
 // import {useEffect, useState} from "react";
 import "./App.css";
-import CircularText from "./components/CircularText";
 import TiltedCard from "./components/TiltedCard";
 import SplitText from "./components/SplitText";
 import LogoLoop from "./components/LogoLoop";
@@ -22,8 +21,6 @@ import {FaGraduationCap} from "react-icons/fa6";
 import {FaNodeJs} from "react-icons/fa";
 import {
   SiLeetcode,
-  SiHtml5,
-  SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -42,8 +39,6 @@ import {
 } from "react-icons/si";
 import GithubPopup from "./components/GithubPopup";
 const techLogos = [
-  {node: <SiHtml5 />, title: "React", href: "https://www.javascript.com/"},
-  {node: <SiCss3 />, title: "React", href: "https://www.javascript.com/"},
   {node: <SiJavascript />, title: "React", href: "https://www.javascript.com/"},
   {node: <SiReact />, title: "React", href: "https://react.dev"},
   {node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com"},
@@ -72,7 +67,8 @@ const techLogos = [
 function App() {
   return (
     <>
-      <div className="relative w-full h-[550px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden sm:mb-10 md:mb-20 lg:mb-50 ">
+      {/* Hero Section */}
+      <div className="relative w-full h-[550px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden sm:mb-10 md:mb-20 lg:mb-60 ">
         <section id="home">
           {/* Aurora Background */}
           <div className="h-screen fixed inset-0 -z-10">
@@ -84,7 +80,6 @@ function App() {
             />
           </div>
 
-          {/* Navbar */}
           <Nav />
 
           <div className="absolute inset-0 flex flex-col items-center justify-start px-4 text-center pt-35 sm:pt-35 md:pt-45 lg:pt-55">
@@ -127,7 +122,7 @@ function App() {
               </p>
             </div>
             <div
-              className="flex items-center justify-center text-white mt-5 sm:mt-15 md:mt-20 lg:mt-25 mx-auto w-full sm:max-w-md md:max-w-4xl lg:max-w-5xl"
+              className="flex items-center justify-center text-white mt-8 sm:mt-15 md:mt-20 lg:mt-23 mx-auto w-full sm:max-w-md md:max-w-4xl lg:max-w-5xl"
               style={{height: "100px", position: "relative"}}>
               <LogoLoop
                 logos={techLogos}
@@ -147,8 +142,8 @@ function App() {
       </div>
       <div>
         {/* About Section */}
-        <section id="about" className="scroll-mt-44 sm:scroll-mt-60">
-          <div className="flex flex-col lg:flex-row items-center justify-center lg:px-20 lg:ml-15">
+        <section id="about" className="scroll-mt-41 sm:scroll-mt-55">
+          <div className="flex flex-col lg:flex-row items-center justify-center lg:px-20 lg:mx-20">
             <div className="h-[100px] w-[100px] rounded-2xl block md:hidden border-2 border-white shadow-[0_0_25px_white] sm:rounded-lg sm:w-[300px] md:h-[300px] mb-5 lg:mb-0 overflow-hidden">
               <img src={myImage} alt="Kingsuk Bose" />
             </div>
@@ -186,45 +181,49 @@ function App() {
         </section>
       </div>
       {/* Skills Section */}
-      <section id="skills" className="scroll-mt-55">
-        <div className="flex flex-col lg:flex-row mt-25 lg:mt-60 lg:items-center lg:justify-center mb-20 sm:mb-30">
-          <div className="mb-15 md:pl-20 lg:pl-30 lg:ml-30 lg:w-1/2">
-            <div className="text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[55px] leading-8 sm:leading-15">
-              Skills
-            </div>
-            <div className="m-5 pl-7 sm:pl-0 sm:pr-10 sm:m-0">
-              <ShinyText
-                texts={[
-                  "Javascript",
-                  "Java",
-                  "TypeScript",
-                  "React",
-                  "Tailwindcss",
-                  "NodeJS",
-                  "ExpressJs",
-                  "Hono",
-                  "Mongodb",
-                  "Postgresql",
-                  "Prisma",
-                  "NextJS",
-                  "Cloudflare",
-                  "Docker",
-                  "Github",
-                ]}
-                disabled={false}
-                speed={3}
-                className="custom-class"
-              />
-            </div>
-          </div>
-          <div className="hidden sm:block border-amber-50 lg:w-1/2">
-            <CircularText
-              text="EAT*SLEEP*CODE*REPEAT*"
-              onHover="speedUp"
-              spinDuration={20}
-              className="custom-class"
-            />
-          </div>
+      <section
+        id="skills"
+        className="mb-25 mt-30 sm:mt-45 scroll-mt-25 sm:scroll-mt-40">
+        <div className="mb-10 text-center lg:w-1/2">
+          <GradientText
+            colors={[
+              "rgba(255,255,255,0.0)", // fully transparent edge
+              "rgba(255,255,255,0.6)", // soft white
+              "rgba(255,255,255,1.0)", // pure bright white (shine core)
+              "rgba(255,255,255,0.6)", // soft white
+              "rgba(255,255,255,0.0)", // fully transparent edge
+            ]}
+            animationSpeed={10}
+            showBorder={false}
+            className="text-center mb-5 lg:text-start font-semibold text-[35px] sm:text-[55px] leading-8 sm:leading-15">
+            Skills
+          </GradientText>
+        </div>
+        <div className="flex flex-row items-center justify-center max-w-full sm:w-1/2 mx-5 sm:mx-auto">
+          <ShinyText
+            texts={[
+              "JavaScript",
+              "Java",
+              "TypeScript",
+              "React",
+              "Tailwindcss",
+              "Hono",
+              "NodeJs",
+              "ExpressJs",
+              "MongoDB",
+              "Prisma",
+              "PostgreSQL",
+              "NextJS",
+              "Cloudflare",
+              "Docker",
+              "Github",
+              "Vercel",
+            ]}
+            disabled={false}
+            speed={5}
+            className="justify-center"
+            textClass="md:text-lg lg:text-xl"
+          />
         </div>
       </section>
 
@@ -268,7 +267,7 @@ function App() {
                     "Hono",
                     "React",
                     "Tailwindcss",
-                    "Postgresql",
+                    "PostgreSQL",
                     "Prisma",
                     "Cloudflare",
                   ]}
@@ -335,7 +334,7 @@ function App() {
                     "Hono",
                     "React",
                     "Tailwindcss",
-                    "Postgresql",
+                    "PostgreSQL",
                     "Prisma",
                     "Cloudflare",
                   ]}
@@ -401,13 +400,12 @@ function App() {
               <div className="mb-5">
                 <ShinyText
                   texts={[
-                    "TypeScript",
-                    "Hono",
+                    "JavaScript",
+                    "NodeJS",
+                    "ExpressJs",
                     "React",
                     "Tailwindcss",
-                    "Postgresql",
-                    "Prisma",
-                    "Cloudflare",
+                    "MongoDB",
                   ]}
                   disabled={false}
                   speed={3}
@@ -434,7 +432,7 @@ function App() {
                   </div>
                 </a>
                 <a
-                  href="https://medium-project-lovat.vercel.app/"
+                  href="https://github.com/Kingsuk-03/PayTM-Clone"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group" // <-- add this
@@ -465,9 +463,9 @@ function App() {
               <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
                 DIG - Dice Game
               </h3>
-              <div className="mb-18">
+              <div className="mb-5">
                 <ShinyText
-                  texts={["JavaScript", "HTML", "CSS", "Vercel"]}
+                  texts={["JavaScript", "HTML", "CSS", "Github", "Vercel"]}
                   disabled={false}
                   speed={3}
                   className="custom-class"
@@ -622,11 +620,11 @@ function App() {
               link="#home"
               text="© Kingsuk Bose 2025"></GithubPopup>
           </div>
-          <div className="hidden md:flex md:flex-row md:items-center md:justify-center md:gap-4">
-            {/* <GithubPopup
+          <div className="hidden lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-4">
+            <GithubPopup
               target="_blank"
               text="Star This Portfolio on Github"
-              link="https://github.com/Kingsuk-03/myPortfolio"></GithubPopup> */}
+              link="https://github.com/Kingsuk-03/myPortfolio"></GithubPopup>
             <GithubPopup
               target="_blank"
               text="Github"
@@ -640,7 +638,7 @@ function App() {
               text="LeetCode"
               link="https://leetcode.com/u/Kingsuk09/"></GithubPopup>
           </div>
-          <div className="flex flex-row items-center justify-center gap-4 md:hidden">
+          <div className="flex flex-row items-center justify-center gap-4 lg:hidden">
             <a
               href="https://github.com/Kingsuk-03"
               target="_blank"
