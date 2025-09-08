@@ -40,7 +40,7 @@ import {
   SiCloudflare,
   SiVercel,
 } from "react-icons/si";
-
+import GithubPopup from "./components/GithubPopup";
 const techLogos = [
   {node: <SiHtml5 />, title: "React", href: "https://www.javascript.com/"},
   {node: <SiCss3 />, title: "React", href: "https://www.javascript.com/"},
@@ -146,7 +146,8 @@ function App() {
         </section>
       </div>
       <div>
-        <section id="about" className="scroll-mt-70">
+        {/* About Section */}
+        <section id="about" className="scroll-mt-44 sm:scroll-mt-60">
           <div className="flex flex-col lg:flex-row items-center justify-center lg:px-20 lg:ml-15">
             <div className="h-[100px] w-[100px] rounded-2xl block md:hidden border-2 border-white shadow-[0_0_25px_white] sm:rounded-lg sm:w-[300px] md:h-[300px] mb-5 lg:mb-0 overflow-hidden">
               <img src={myImage} alt="Kingsuk Bose" />
@@ -184,13 +185,14 @@ function App() {
           </div>
         </section>
       </div>
+      {/* Skills Section */}
       <section id="skills" className="scroll-mt-55">
-        <div className="flex flex-col lg:flex-row mt-25 lg:mt-60 lg:items-center lg:justify-center lg:gap-10 mb-30">
+        <div className="flex flex-col lg:flex-row mt-25 lg:mt-60 lg:items-center lg:justify-center mb-20 sm:mb-30">
           <div className="mb-15 md:pl-20 lg:pl-30 lg:ml-30 lg:w-1/2">
             <div className="text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[55px] leading-8 sm:leading-15">
               Skills
             </div>
-            <div className="m-5 pl-10 sm:pl-0 sm:m-0">
+            <div className="m-5 pl-7 sm:pl-0 sm:pr-10 sm:m-0">
               <ShinyText
                 texts={[
                   "Javascript",
@@ -206,7 +208,6 @@ function App() {
                   "Prisma",
                   "NextJS",
                   "Cloudflare",
-                  "Git",
                   "Docker",
                   "Github",
                 ]}
@@ -283,7 +284,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="group">
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white  text-sm sm:text-base cursor-pointer rounded-xl
                  bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                  shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                  text-shadow">
@@ -302,7 +303,7 @@ function App() {
                   className="group" // <-- add this
                 >
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                text-shadow">
@@ -350,7 +351,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="group">
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                  bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                  shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                  text-shadow">
@@ -369,7 +370,7 @@ function App() {
                   className="group" // <-- add this
                 >
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                text-shadow">
@@ -420,7 +421,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="group">
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                  bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                  shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                  text-shadow">
@@ -439,7 +440,7 @@ function App() {
                   className="group" // <-- add this
                 >
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                text-shadow">
@@ -479,7 +480,7 @@ function App() {
                   rel="noopener noreferrer"
                   className="group">
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                  bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                  shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                  text-shadow">
@@ -498,7 +499,7 @@ function App() {
                   className="group" // <-- add this
                 >
                   <div
-                    className="relative flex items-center gap-2 px-5 py-3 text-white text-base cursor-pointer rounded-xl
+                    className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
                shadow-[inset_0px_0px_5px_#ffffffa9,inset_0px_35px_30px_#000,0px_5px_10px_#000000cc]
                text-shadow">
@@ -547,10 +548,14 @@ function App() {
                 <p className="text-3xl mb-2.5">Netaji Subhash Engineering College</p>
                 <p>Sep 2022 - Present</p>
                 <p className="font-semibold mb-2.5">CGPA - 7.73</p>
-                <p className="text-[20px]">
+                <p className="hidden sm:block text-[20px]">
                   Courses: Operating Systems, Data Structures, Analysis Of
                   Algorithms, Artificial Intelligence, Machine Learning, Networking,
                   DBMS
+                </p>
+                <p className="block sm:hidden text-[20px]">
+                  Courses: Operating Systems, DSA, Artificial Intelligence, Machine
+                  Learning, Networking, DBMS
                 </p>
               </Card>
 
@@ -608,10 +613,34 @@ function App() {
           </div>
         </div>
       </section>
+      {/* Footer Section */}
       <section id="footer">
         <div className="text-white flex flex-col sm:flex-row items-center justify-around mx-6 sm:mx-12 my-5 sm:my-10">
-          <div className="mb-2 sm:mb-0">© Kingsuk Bose 2025</div>
-          <div className="flex flex-row gap-4">
+          <div className="mb-2 sm:mb-0">
+            <GithubPopup
+              target=""
+              link="#home"
+              text="© Kingsuk Bose 2025"></GithubPopup>
+          </div>
+          <div className="hidden md:flex md:flex-row md:items-center md:justify-center md:gap-4">
+            {/* <GithubPopup
+              target="_blank"
+              text="Star This Portfolio on Github"
+              link="https://github.com/Kingsuk-03/myPortfolio"></GithubPopup> */}
+            <GithubPopup
+              target="_blank"
+              text="Github"
+              link="https://github.com/Kingsuk-03"></GithubPopup>
+            <GithubPopup
+              target="_blank"
+              text="LinkedIn"
+              link="https://www.linkedin.com/in/kingsuk-bose-995615245/"></GithubPopup>
+            <GithubPopup
+              target="_blank"
+              text="LeetCode"
+              link="https://leetcode.com/u/Kingsuk09/"></GithubPopup>
+          </div>
+          <div className="flex flex-row items-center justify-center gap-4 md:hidden">
             <a
               href="https://github.com/Kingsuk-03"
               target="_blank"

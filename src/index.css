@@ -37,3 +37,56 @@ body {
     transform: translateX(-50%);
   }
 }
+
+@keyframes star-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes star-shine {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes border-glow-translate {
+  from {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  to {
+    transform: translateX(50%) translateY(50%);
+  }
+}
+
+@keyframes border-glow-scale {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* Register animations for usage */
+.star-rotate {
+  animation: star-rotate 14s linear infinite;
+}
+.star-shine {
+  animation: star-shine 14s ease-in-out infinite alternate;
+}
+.border-glow-translate {
+  animation: border-glow-translate 10s ease-in-out infinite alternate;
+}
+.border-glow-scale {
+  animation: border-glow-scale 10s ease-in-out infinite alternate;
+}

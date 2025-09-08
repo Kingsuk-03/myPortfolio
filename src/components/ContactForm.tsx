@@ -80,8 +80,8 @@ const ContactForm = () => {
             name="message"
             required></textarea>
         </div>
-        <button type="submit" className="text-lg btn-donate">
-          Send Message
+        <button className="text-[17px] px-[25px] py-[10px] rounded-xl bg-gradient-to-b from-[#d6cafe] to-[#9e81fe] border-2 border-neutral-800 border-b-[5px] border-b-neutral-800 shadow-[0px_1px_6px_0px_#9e81fe] cursor-pointer transition-all duration-200 ease-linear active:translate-y-[3px] active:border-b-[2px] active:border-b-neutral-800">
+          Click Me
         </button>
       </form>
     </div>

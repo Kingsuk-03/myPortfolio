@@ -20,7 +20,7 @@ const ShinyText: React.FC<ShinyTextProps> = ({
       {texts.map((text, index) => (
         <button
           key={index}
-          className={`px-4 py-2 rounded-lg border border-[#ffffffa4] bg-transparent text-[#ffffffa4] bg-clip-text inline-block ${
+          className={`text-xs sm:text-base px-4 py-2 rounded-lg border border-[#ffffffa4] bg-transparent text-[#ffffffa4] bg-clip-text inline-block ${
             disabled ? "" : "animate-shine"
           } ${className}`}
           style={{
@@ -38,21 +38,3 @@ const ShinyText: React.FC<ShinyTextProps> = ({
 };
 
 export default ShinyText;
-
-// tailwind.config.js
-// module.exports = {
-//   theme: {
-//     extend: {
-//       keyframes: {
-//         shine: {
-//           '0%': { 'background-position': '100%' },
-//           '100%': { 'background-position': '-100%' },
-//         },
-//       },
-//       animation: {
-//         shine: 'shine 5s linear infinite',
-//       },
-//     },
-//   },
-//   plugins: [],
-// };
