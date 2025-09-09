@@ -1,4 +1,3 @@
-// import {useEffect, useState} from "react";
 import "./App.css";
 import TiltedCard from "./components/TiltedCard";
 import SplitText from "./components/SplitText";
@@ -7,17 +6,17 @@ import myImage from "./assets/myImage.jpg";
 import Aurora from "./components/Aurora";
 import Nav from "./components/Nav";
 import Pic from "./assets/dp.png";
-import ContentGenerator from "./assets/projects/ContentGenerator.png";
 import dig_dicegame from "./assets/projects/dig_dicegame.png";
 import bloggSite from "./assets/projects/bloggSite.png";
-import payTm from "./assets/projects/payTm.jpeg";
-import {GoArrowUpRight} from "react-icons/go";
+import Portfolio from "./assets/projects/portfolio.png";
 import GradientText from "./components/GradientText";
 import CardSwap, {Card} from "./components/CardSwap";
-import ContactForm from "./components/ContactForm";
 import ProfileCard from "./components/ProfileCard";
-import ShinyText from "./components/ShinyText";
+import ContactForm from "./components/ContactForm";
+import payTm from "./assets/projects/payTm.jpeg";
 import {FaGraduationCap} from "react-icons/fa6";
+import ShinyText from "./components/ShinyText";
+import {GoArrowUpRight} from "react-icons/go";
 import {FaNodeJs} from "react-icons/fa";
 import {
   SiLeetcode,
@@ -39,7 +38,11 @@ import {
 } from "react-icons/si";
 import GithubPopup from "./components/GithubPopup";
 const techLogos = [
-  {node: <SiJavascript />, title: "React", href: "https://www.javascript.com/"},
+  {
+    node: <SiJavascript />,
+    title: "Javascript",
+    href: "https://www.javascript.com/",
+  },
   {node: <SiReact />, title: "React", href: "https://react.dev"},
   {node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com"},
   {
@@ -47,22 +50,22 @@ const techLogos = [
     title: "TypeScript",
     href: "https://www.typescriptlang.org",
   },
-  {node: <FaNodeJs />, title: "React", href: "https://nodejs.org/en"},
+  {node: <FaNodeJs />, title: "NodeJs", href: "https://nodejs.org/en"},
   {node: <SiExpress />, title: "Express.js", href: "https://expressjs.com/"},
-  {node: <SiHono />, title: "Express.js", href: "https://hono.dev/"},
+  {node: <SiHono />, title: "Hono", href: "https://hono.dev/"},
   {node: <SiMongodb />, title: "Express.js", href: "https://www.mongodb.com/"},
-  {node: <SiPostgresql />, title: "Express.js", href: "https://www.postgresql.org/"},
-  {node: <SiPrisma />, title: "Next.js", href: "https://www.prisma.io/"},
-  {node: <SiGit />, title: "Express.js", href: "https://git-scm.com/"},
-  {node: <SiDocker />, title: "Express.js", href: "https://www.docker.com/"},
-  {node: <SiGithub />, title: "Express.js", href: "https://github.com/Kingsuk-03"},
+  {node: <SiPostgresql />, title: "Mongodb", href: "https://www.postgresql.org/"},
+  {node: <SiPrisma />, title: "Prisma", href: "https://www.prisma.io/"},
+  {node: <SiGit />, title: "Git", href: "https://git-scm.com/"},
+  {node: <SiDocker />, title: "Docker", href: "https://www.docker.com/"},
+  {node: <SiGithub />, title: "Github", href: "https://github.com/Kingsuk-03"},
   {
     node: <SiCloudflare />,
-    title: "Next.js",
-    href: "https://www.cloudflare.com/lp/pg-one-platform-ppc/?&utm_campaign=&utm_term=&gad_campaignid=22527073640",
+    title: "Cloudflare",
+    href: "https://www.cloudflare.com",
   },
   {node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org"},
-  {node: <SiVercel />, title: "React", href: "https://www.javascript.com/"},
+  {node: <SiVercel />, title: "Vercel", href: "https://www.javascript.com/"},
 ];
 function App() {
   return (
@@ -122,7 +125,7 @@ function App() {
               </p>
             </div>
             <div
-              className="flex items-center justify-center text-white mt-8 sm:mt-15 md:mt-20 lg:mt-23 mx-auto w-full sm:max-w-md md:max-w-4xl lg:max-w-5xl"
+              className="flex items-center justify-center text-white mt-8 sm:mt-15 md:mt-20 lg:mt-23 mx-auto overflow-hidden w-full sm:max-w-md md:max-w-4xl lg:max-w-5xl"
               style={{height: "100px", position: "relative"}}>
               <LogoLoop
                 logos={techLogos}
@@ -318,25 +321,22 @@ function App() {
 
             <div className="p-6 rounded-2xl shadow-md hover:shadow-lg transition bg-white/10 backdrop-blur-lg">
               <div className="max-w-full mb-4 sm:mb-2">
-                <img
-                  src={ContentGenerator}
-                  alt="blogging site"
-                  className="border border-white rounded-xl shadow-[0_0_10px_rgba(255,255,255,0.5)] hover:shadow-[0_0_15px_rgba(255,255,255,0.7)] transition"
-                />
+                <img src={Portfolio} alt="blogging site" className="rounded-xl" />
               </div>
               <h3 className="text-xl text-center mb-5 lg:text-start font-semibold text-white text-[30px] sm:text-[35px] leading-8 sm:leading-15">
-                AI - Content Generator
+                My Portfolio Website
               </h3>
               <div className="mb-5">
                 <ShinyText
                   texts={[
                     "TypeScript",
-                    "Hono",
                     "React",
                     "Tailwindcss",
-                    "PostgreSQL",
-                    "Prisma",
-                    "Cloudflare",
+                    "Motion",
+                    "GSAP",
+                    "Ogl",
+                    "Github",
+                    "Vercel",
                   ]}
                   disabled={false}
                   speed={3}
@@ -401,7 +401,7 @@ function App() {
                 <ShinyText
                   texts={[
                     "JavaScript",
-                    "NodeJS",
+                    "NodeJs",
                     "ExpressJs",
                     "React",
                     "Tailwindcss",

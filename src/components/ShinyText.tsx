@@ -1,4 +1,5 @@
 import React from "react";
+import motion from "../assets/motion.png";
 import {BiLogoJava} from "react-icons/bi";
 import {
   SiHtml5,
@@ -30,7 +31,7 @@ interface ShinyTextProps {
 
 const iconMap: Record<string, React.ReactNode> = {
   JavaScript: <SiJavascript className="text-yellow-400" />,
-  Cloudflare: <SiCloudflare className="text-yellow-400" />,
+  Cloudflare: <SiCloudflare className="text-[#f78508]" />,
   Tailwindcss: <SiTailwindcss className="text-sky-400" />,
   TypeScript: <SiTypescript className="text-sky-600" />,
   PostgreSQL: <SiPostgresql className="text-sky-400" />,
@@ -42,11 +43,12 @@ const iconMap: Record<string, React.ReactNode> = {
   Github: <SiGithub className="text-gray-200" />,
   Prisma: <SiPrisma className="text-gray-200" />,
   Vercel: <SiVercel className="text-gray-200" />,
-  HTML: <SiHtml5 className="text-orange-400" />,
+  HTML: <SiHtml5 className="text-[#e5532d]" />,
   Docker: <SiDocker className="text-sky-400" />,
   React: <SiReact className="text-cyan-400" />,
-  Hono: <SiHono className="text-orange-300" />,
-  CSS: <SiCss3 className="text-blue-400" />,
+  Hono: <SiHono className="text-orange-500" />,
+  CSS: <SiCss3 className="text-[#36adde]" />,
+  Motion: <img src={motion} className="h-4 w-4" />,
 };
 
 const ShinyText: React.FC<ShinyTextProps> = ({
