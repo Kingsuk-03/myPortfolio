@@ -2,7 +2,7 @@ import React from "react";
 import Swal from "sweetalert2";
 
 const ContactForm = () => {
-  const [result, setResult] = React.useState("");
+  const [, setResult] = React.useState("");
 
   const onSubmit = async (event: any) => {
     event.preventDefault();

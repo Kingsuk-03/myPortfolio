@@ -594,7 +594,6 @@ function App() {
               title="FullStack Developer"
               handle="kingsuk.dev"
               status="Online"
-              contactText="Contact Me"
               avatarUrl={Pic}
               iconUrl={Pic}
               grainUrl=""
