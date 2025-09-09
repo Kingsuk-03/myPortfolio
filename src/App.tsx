@@ -345,7 +345,7 @@ function App() {
               </div>
               <div className="flex flex-row gap-4">
                 <a
-                  href="https://github.com/Kingsuk-03/Medium-Project"
+                  href="https://github.com/Kingsuk-03/myPortfolio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group">
@@ -363,11 +363,10 @@ function App() {
                   </div>
                 </a>
                 <a
-                  href="https://medium-project-lovat.vercel.app/"
+                  href="https://kingsukbose.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group" // <-- add this
-                >
+                  className="group">
                   <div
                     className="relative flex items-center gap-2 px-5 py-3 text-white text-sm sm:text-base cursor-pointer rounded-xl
                bg-[linear-gradient(90deg,#5bfcc4,#f593e4,#71a4f0)]
