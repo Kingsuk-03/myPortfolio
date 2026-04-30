@@ -4,7 +4,7 @@
 html,
 body {
   font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* From Uiverse.io by Allyhere */
